@@ -1,4 +1,4 @@
-# Exercicis
+# Exercicis (Java)
 
 ## Exercici 1 - Producte
 

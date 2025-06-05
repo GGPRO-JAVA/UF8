@@ -1,26 +1,90 @@
 # 3. Polimorfisme
 
-La sobreescriptura de mètodes és la base d'un dels conceptes més potents de Java: **la selecció dinàmica de mètodes**. Aquest mecanisme resol les crides a mètodes sobreescrits **durant el temps d'execució**, no en temps de compilació. Això permet implementar el **polimorfisme** en temps d'execució.
+El **polimorfisme** o sobreescriptura de mètodes és la pràctica de definir un mètode en una subclasse amb la mateixa signatura (nom i paràmetres) que un mètode existent en la classe base. Quan una subclasse sobreescriu un mètode, ofereix una implementació específica per a aquell comportament.
 
-En Java, una **variable de referència** a una superclasse pot referir-se a un objecte d'una subclasse. Així, el tipus de l'objecte referenciat, i no el tipus de la variable, determina quina versió del mètode s'executa.
+Gra­cies a la sobreescriptura i a la selecció dinàmica de mètodes, el sistema decideix en temps d'execució quina versió del mètode ha de cridar-se. Això s'aconsegueix perquè **una referència d'una classe general pot apuntar a un objecte d'una classe derivada**. En conseqüència, **el tipus real de l'objecte determina quin bloc de codi s'executarà**, no el tipus declarat de la variable.
 
-El **polimorfisme** és essencial en la programació orientada a objectes perquè permet que una **classe general** defineixi mètodes comuns per a totes les seues subclasses. Aquestes subclasses poden, si ho necessiten, redefinir o implementar de nou alguns d'aquests mètodes per adaptar-los al seu comportament específic.
+Aquest mecanisme permet implementar el polimorfisme en temps d'execució, que és un pilar fonamental de la programació orientada a objectes. Concretament:
 
-A través de la combinació de **herència** i **sobreescriptura de mètodes**, una superclasse pot definir la forma general dels mètodes que utilitzaran les subclasses, alhora que dona la flexibilitat perquè aquestes personalitzen la seua implementació. Això fa que el polimorfisme siga una eina fonamental per a escriure codi reutilitzable i adaptable.
+- Una superclasse pot definir un conjunt de mètodes generals.
+- Les subclasses poden reutilitzar aquests mètodes tal qual o, si cal, sobreescriure'ls per oferir un comportament específic.
+- Quan es crida un mètode mitjançant una referència d'una classe general, el sistema inspecciona en temps d'execució de quina subclasse prové l'objecte i executa la implementació corresponent a eixa classe derivada.
 
-## 3.1 Exemple 4
+:::: tabs
+=== Java
 
-Anem a provar un exemple senzill però que resumeix tot el que és important del polimorfisme.  
-Anem a crear la classe **Mare** amb un mètode **llamame()**. A continuació, crearem dues classes derivades d'aquesta: **Hija1** i **Hija2**, sobreescrivint el mètode **llamame()**. En el **main**, crearem un objecte de cada classe i els assignarem a una variable de tipus **Mare** (anomenada **madre2**) amb la qual anomenarem al mètode **llamame()** dels tres objectes.  
+En Java, la selecció dinàmica de mètodes s'aconsegueix mitjançant la sobreescriptura i l'ús de referències a la superclasse:
 
-És important observar que la variable **Mare madre2** es pot assignar a objectes de classe **Hija1** i **Hija2**. Això és possible perquè **Hija1** i **Hija2** també són de tipus **Mare** (a causa de l'herència).
+1. Sobreescriptura de mètodes
 
-També és important veure que la variable **Mare madre2** cridarà al mètode **llamame()** de la classe de l'objecte al qual fa referència (a causa del polimorfisme).  
+   - Quan una subclasse defineix un mètode amb la mateixa signatura que un mètode de la superclasse, aquest mètode s'anomena sobreescrit.
+   - L'anotació `@Override` es recomana per assegurar que el mètode coincideix exactament amb el de la classe base.
 
-Observe's les anomenades **madre2.llamame()** de les línies 36 d'ara en avant:
+2. Selecció dinàmica en temps d'execució
 
-- En el primer cas, s'invoca al mètode **llamame()** de la classe **Mare** perquè **madre2** fa referència a un objecte de la classe **Mare**.  
-- En el segon cas, s'invoca al mètode **llamame()** de la classe **Hija1** perquè ara **madre2** fa referència a un objecte de la classe **Hija1**.  
-- En el tercer cas, s'invoca al mètode **llamame()** de la classe **Hija2** perquè ara **madre2** fa referència a un objecte de la classe **Hija2**.
+   - Es pot declarar una variable del tipus de la superclasse, però assignar-li un objecte d'una subclasse:
 
-![Exemple 4](/uf8/eixida_exemple4.jpg)
+        ```java
+        Superclasse ref = new Subclasse();
+        ```
+
+    - Quan s'invoca un mètode que està sobreescrit per la subclasse, Java triarà automàticament la implementació de la classe concreta (subclasse), tot i que la variable es declare com a tipus general.
+
+        ```java
+        ref.metodeSobreescrit();  // Crida la versió definida a Subclasse
+        ```
+
+Exemple de polimorfisme:
+
+::: tabs
+== Classe Animal
+
+```java
+class Animal {
+    public void ferSo() {
+        System.out.println("L'animal fa un so genèric.");
+    }
+}
+```
+
+== Classe Gos
+
+```java
+class Gos extends Animal {
+    @Override
+    public void ferSo() {
+        System.out.println("El gos lladra.");
+    }
+}
+```
+
+== Classe Gat
+
+```java
+class Gat extends Animal {
+    @Override
+    public void ferSo() {
+        System.out.println("El gat miola.");
+    }
+}
+```
+
+== Classe principal
+
+```java
+public class ExemplePolimorfisme {
+    public static void main(String[] args) {
+        Animal a1 = new Gos();
+        Animal a2 = new Gat();
+
+        a1.ferSo();  // Imprimeix "El gos lladra."
+        a2.ferSo();  // Imprimeix "El gat miola."
+    }
+}
+```
+
+:::
+
+En aquest fragment, malgrat que **a1** i **a2** són de tipus **Animal**, en temps d'execució Java resol quina versió de **ferSo()** executar segons el tipus real de l'objecte (Gos o Gat).
+
+::::

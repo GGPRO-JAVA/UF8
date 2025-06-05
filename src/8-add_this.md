@@ -1,4 +1,4 @@
-# Referència `this` en Java
+# Referència `this` (Java)
 
 En Java, `this` és una paraula clau especial que representa l'objecte actual de la classe. En altres paraules, quan un mètode s'executa dins d'una instància d'una classe, **this** apunta a aquesta instància concreta.
 

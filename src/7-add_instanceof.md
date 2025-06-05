@@ -1,4 +1,4 @@
-# L'operador `instanceof` en Java
+# L'operador `instanceof`  (Java)
 
 L'operador `instanceof` en Java és fonamental en la programació orientada a objectes perquè permet determinar si un objecte pertany a una determinada classe o a una de les seves subclasses. Això és especialment útil en situacions en què es treballa amb referències de tipus més genèric i es vol verificar la seva instància concreta per aplicar-hi un tractament especialitzat.
 
