@@ -1,4 +1,4 @@
-# Exercicis (Java)
+# Exercicis
 
 ## Exercici 1 - Producte
 
@@ -12,17 +12,16 @@ Implementa aquesta classe amb un constructor (amb paràmetres) a més dels gette
 A continuació, en el programa principal fes el següent:
 
 1. Crea 5 instàncies de la Classe Producte.
-2. Crea un ArrayList.
-3. Afig les 5 instàncies de Producte al ArrayList.
-4. Visualitza el contingut del ArrayList utilitzant Iterator.
-5. Elimina dos element del ArrayList.
-6. Inserida un nou objecte producte enmig de la llista.
-7. Visualitza de nou el contingut de ArrayList utilitzant Iterator.
-8. Elimina tots els valors del ArrayList.
+2. Crea un llistat i afig les 5 instàncies de Producte al ArrayList.
+3. Visualitza el contingut del llistat.
+4. Elimina dos element del llistat.
+5. Insereix un nou objecte Producte enmig de la llistat.
+6. Visualitza de nou el contingut.
+7. Elimina tots els productes del llistat.
 
 ## Exercici 2 - Astres
 
-Define una jerarquia de classes que permeta emmagatzemar dades sobre els planetes i satèl·lits (llunes) que formen part del sistema solar.
+Defineix una jerarquia de classes que permeta emmagatzemar dades sobre els planetes i satèl·lits (llunes) que formen part del sistema solar.
 
 Alguns atributs que necessitarem emmagatzemar són:
 
@@ -33,19 +32,19 @@ Alguns atributs que necessitarem emmagatzemar són:
 - Distancia mitjana a aqueix cos.
 - etc.
 
-Defineix les classes necessàries contenint:
+Defineix les classes necessàries, amb:
 
 - Constructors.
 - Mètodes per a recuperar i emmagatzemes atributs.
 - Mètodes per a mostrar la informació de l'objecte.
 
-Defineix un mètode, que donat un objecte del sistema solar (planeta o satèl·lit), imprimisca tota la informació que es disposa sobre el mateix (a més de la seua lista de satèl·lits si els tinguera).
+Defineix un mètode que, donat un objecte del sistema solar (planeta o satèl·lit), imprimisca tota la informació que es disposa sobre el mateix (a més de el seu llistat de satèl·lits si els tinguera).
 
 El diagrama UML seria:
 
 ![Esquema d'herència](/uf8/Exercici_Astros.jpg)
 
-Una possible solució seria crear una llista d'objectes, inserir els planetes i satèl·lits (directament mitjançant codi o sol·licitant-los per pantalla) i després mostrar un xicotet menú que permeta a l'usuari imprimir la informació de l'astre que trie.
+Una possible solució seria crear un llistat d'objectes, inserir els planetes i satèl·lits (directament mitjançant codi o sol·licitant-los per pantalla) i després mostrar un xicotet menú que permeta a l'usuari imprimir la informació de l'astre que trie.
 
 ## Exercici 3 - Mascotes
 
@@ -54,9 +53,9 @@ Implementa una classe anomenada **Inventari** que utilitzarem per a emmagatzemar
 Aquesta classe ha de complir amb els següents requisits:
 
 - A la botiga existiran 4 tipus d'animals: gossos, gats, lloros i canaris.
-- Els animals han d'emmagatzemar-se en un ArrayList privat dins de la classe Inventari.
+- Els animals han d'emmagatzemar-se en un llistat privat dins de la classe Inventari.
 - La classe ha de permetre realitzar les següents accions:
-  - Mostrar la llista d'animals (sols tipus i nom, 1 línia per animal).
+  - Mostrar el llistat d'animals (sols tipus i nom, 1 línia per animal).
   - Mostrar totes les dades d'un animal concret.
   - Mostrar totes les dades de tots els animals.
   - Inserir animals en l’inventari.
@@ -93,7 +92,7 @@ D'aquesta classe heretaran dues subclasses: **CompteCorrent** i **CompteEstalvi*
 - A la primera se li incrementarà el saldo tenint en compte l'interés anual bàsic.
 - La segona tindrà una constant de classe anomenada **saldoMinim**. Si no s'arriba a aquest saldo l'interés serà la meitat de l'interés bàsic. Si se supera el saldo mínim l'interés aplicat serà el doble de l'interés anual bàsic.
 
-Implementa una classe principal amb funció main per a provar el funcionament de les tres classes: Crea diversos comptes bancaris de diferents tipus, poden estar en un ArrayList si ho desitges; prova de realitzar ingressos, retirades i transferències; calcula els interessos i mostra'ls per pantalla; etc.
+Implementa una classe principal per a provar el funcionament de les tres classes: Crea diversos comptes bancaris de diferents tipus, prova de realitzar ingressos, retirades i transferències; calcula els interessos i mostra'ls per pantalla; etc.
 
 El diagrama UML seria:
 
@@ -131,7 +130,7 @@ Les **empreses** tenen les següents característiques:
 
 **Implementa les classes Emprat i Empresa** amb els atributs oportuns, un constructor, els getters/setters oportuns i els mètodes indicats. Pots afegir més mètodes si ho veus necessari. Aquestes classes no han de realitzar cap mena d'entrada per teclat.
 
-**Implementa també una classe Programa** amb una funció main per a realitzar proves: Crear una o diverses empreses, crear empleats, afegir i eliminar empleats a les empreses, llistar tots els empleats, mostrar el total de sous bruts i nets, etc.
+**Implementa també una classe Programa_Principal** per a realitzar proves: crear una o diverses empreses, crear empleats, afegir i eliminar empleats a les empreses, llistar tots els empleats, mostrar el total de sous bruts i nets, etc.
 
 **(\*)** L'IRPF realment és més complex però s'ha simplificat per a no complicar massa aquest exercici.
 
@@ -139,7 +138,7 @@ Les **empreses** tenen les següents característiques:
 
 **És molt aconsellable fer el disseny UML abans de començar a programar**.
 
-Deus crear diverses classes per a un programari d'una empresa de transport. Implementa la jerarquia de classes necessària per a complir els següents criteris:
+Crea diverses classes per a un programari d'una empresa de transport. Implementa la jerarquia de classes necessària per a complir els següents criteris:
 
 - Els vehicles de l'empresa de transport poden ser terrestres, aquàtics i aeris. Els vehicles terrestres poden ser cotxes i motos. Els vehicles aquàtics poden ser vaixells i submarins. Els vehicles aeris poden ser avions i helicòpters.
 - Tots els vehicles tenen matrícula i model (dades que no poden canviar). La matrícula dels cotxes terrestres han d'estar formada per 4 números i 3 lletres. La dels vehicles aquàtics per entre 3 i 10 lletres. La dels vehicles aeris per 4 lletres i 6 números.
@@ -155,9 +154,9 @@ Deus crear diverses classes per a un programari d'una empresa de transport. Impl
 - No es permeten vehicles genèrics, és a dir, no es deuen poder instanciar objectes que siguen vehicles sense més. Però ha de ser possible instanciar vehicles terrestres, aquàtics o aeris genèrics (és a dir, que no siguen cotxes, motos, vaixells, submarins, avions o helicòpters).
 - El disseny ha d'obligar al fet que totes les classes de vehicles tinguen un mètode imprimir() que imprimisca per pantalla la informació del vehicle en una sola línia.
 
-Implementa totes les classes necessàries amb: atributs, constructor amb paràmetres, getters/setters i el mètode imprimir. Utilitza **abstracció** i **herència** de la forma més apropiada. 
+Implementa totes les classes necessàries amb: atributs, constructor amb paràmetres, getters/setters i el mètode imprimir. Utilitza **abstracció** i **herència** de la forma més apropiada.
 
-Implementa també una classe Programa per a fer algunes proves: Instància diversos vehicles de tota mena (cotxes, motos, vaixells, submarins, avions i helicòpters) així com vehicles genèrics (terrestres, aquàtics i aeris). Crea un ArrayList i afegis tots els vehicles. Recorre la llista i crida al mètode imprimir de tots els vehicles.
+Implementa també una classe Programa per a fer algunes proves: Instància diversos vehicles de tota mena (cotxes, motos, vaixells, submarins, avions i helicòpters) així com vehicles genèrics (terrestres, aquàtics i aeris). Crea un llistat i afig tots els vehicles. Recorre el llistat i crida al mètode imprimir de tots els vehicles.
 
 ## Exercici 7 - Figures
 
@@ -177,9 +176,9 @@ Existeixen 4 tipus de figures.
 
 Crea les 4 classes de figures de manera que implementen la interfície iFigura2D. Defineix els seus mètodes.
 
-Crea una classe ProgramaFiguras amb un main en el qual realitzar les següents proves:
+Crea una classe ProgramaFiguras en la qual realitzar les següents proves:
 
-1. Crea un ArrayList figures.
+1. Crea un llistat de figures.
 2. Afig figures de diversos tipus.
 3. Mostra la informació de totes les figures.
 4. Escala totes les figures amb escala = 2.
@@ -189,7 +188,7 @@ Crea una classe ProgramaFiguras amb un main en el qual realitzar les següents p
 
 ## Exercici 8 - Cas pràctic DawBank
 
-L'empresa <i>LibreCoders</i> us ha contractat per desenvolupar un programari de gestió d'un compte bancari per a la cooperativa de banca ètica i sostenible DawBank. Es tracta d'una aplicació Java formada per una classe principal DawBank i una altra anomenada CompteBancari.
+L'empresa <i>LibreCoders</i> us ha contractat per desenvolupar un programari de gestió d'un compte bancari per a la cooperativa de banca ètica i sostenible DawBank. Es tracta d'una aplicació formada per una classe principal DawBank i una altra anomenada CompteBancari.
 
 El programa demanarà les dades necessàries per crear un compte bancari. Si són vàlids, crearà el compte i mostrarà el menú principal per permetre actuar sobre el compte. Després de cada acció es tornarà a mostrar el menú.
 
@@ -199,7 +198,7 @@ El programa demanarà les dades necessàries per crear un compte bancari. Si só
 4. **Saldo**. Mostrarà el saldo disponible.
 5. **Ingrés**. Demanarà la quantitat a ingressar i realitzarà l'ingrés si és possible.
 6. **Retirada**. Demanarà la quantitat a retirar i realitzarà la retirada si és possible.
-7. **Moviments**. Mostrarà una llista amb l'historial de moviments.
+7. **Moviments**. Mostrarà una llistat amb l'historial de moviments.
 8. **Eixir**. Finalitza el programa.
 
 **Classe CompteBancari**  
