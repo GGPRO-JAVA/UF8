@@ -7,7 +7,7 @@ Si una classe és una plantilla per a crear objectes, **una interfície és una 
 >[!IMPORTANT]<strong>IMPORTANT!</strong>
 >**Una interfície és una declaració d'atributs i mètodes sense implementació.**
 
-Mitjançant la construcció d'una interfície, es pretén especificar què caracteritza a una col·lecció d'objectes i, igualment, especificar quin comportament han de reunir els objectes que vulguen entrar dins d’eixa categoria o col·lecció.
+Mitjançant la construcció d'una interfície, es pretén especificar què caracteritza a una col·lecció d'objectes i, igualment, especificar quin comportament han de reunir els objectes que vulguen entrar dins d'eixa categoria o col·lecció.
 
 En una interfície també es poden declarar constants que defineixen el comportament que han de suportar els objectes que vulguen implementar aqueixa interfície. La sintaxi típica d'una interfície és la següent:
 
@@ -22,13 +22,13 @@ public interface Nom {
 
 :::
 
-**Una interfície defineix un tipus**, és a dir, serveix per indicar que una variable, un paràmetre o un valor de retorn pertany a un tipus que compleix certes característiques. Fins i tot quan no conté cap mètode (allò que s’anomena “interfície buida”), estem establint un tipus concret que permet al compilador i al programador entendre la finalitat d’aquells objectes.
+**Una interfície defineix un tipus**, és a dir, serveix per indicar que una variable, un paràmetre o un valor de retorn pertany a un tipus que compleix certes característiques. Fins i tot quan no conté cap mètode (allò que s'anomena "interfície buida"), estem establint un tipus concret que permet al compilador i al programador entendre la finalitat d'aquells objectes.
 
-Les interfícies, encara que estiguen buides, són molt valuoses perquè faciliten el manteniment i l’extensió de les aplicacions. Quan definim un comportament comú, podem fer que totes les classes que l’implementen segueixen el mateix patró: si en el futur volem afegir-hi un nou mètode o una nova propietat, només caldrà actualitzar la interfície i forçar que totes les classes adaptin la seua implementació. Això fa que el codi siga més fàcil de mantenir i evolutiu davant d’exigències canviants.
+Les interfícies, encara que estiguen buides, són molt valuoses perquè faciliten el manteniment i l'extensió de les aplicacions. Quan definim un comportament comú, podem fer que totes les classes que l'implementen segueixen el mateix patró: si en el futur volem afegir-hi un nou mètode o una nova propietat, només caldrà actualitzar la interfície i forçar que totes les classes adaptin la seua implementació. Això fa que el codi siga més fàcil de mantenir i evolutiu davant d'exigències canviants.
 
-A més, el fet de disposar d’una interfície permet crear **variables polimòrfiques**: podem declarar una variable amb el nom de la interfície i assignar-hi objectes de qualsevol classe que la implementi. En temps d’execució, la invocació de mètodes es pot fer de manera polimòrfica, tractant diferents classes de manera uniforme.
+A més, el fet de disposar d'una interfície permet crear **variables polimòrfiques**: podem declarar una variable amb el nom de la interfície i assignar-hi objectes de qualsevol classe que la implementi. En temps d'execució, la invocació de mètodes es pot fer de manera polimòrfica, tractant diferents classes de manera uniforme.
 
-En la pràctica, una interfície buida pot servir com a “etiqueta” que identifica un conjunt heterogeni d’objectes. Per exemple, si definim una interfície sense cap mètode, qualsevol classe que l’implementi queda automàticament dins del grup que aquella interfície representa.
+En la pràctica, una interfície buida pot servir com a "etiqueta" que identifica un conjunt heterogeni d'objectes. Per exemple, si definim una interfície sense cap mètode, qualsevol classe que l'implementi queda automàticament dins del grup que aquella interfície representa.
 
 >[!IMPORTANT]<strong>IMPORTANT</strong>
 >Cal tindre en compte que:

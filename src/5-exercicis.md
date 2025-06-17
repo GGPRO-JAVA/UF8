@@ -58,7 +58,7 @@ Aquesta classe ha de complir amb els següents requisits:
   - Mostrar el llistat d'animals (sols tipus i nom, 1 línia per animal).
   - Mostrar totes les dades d'un animal concret.
   - Mostrar totes les dades de tots els animals.
-  - Inserir animals en l’inventari.
+  - Inserir animals en l'inventari.
   - Eliminar animals de l'inventari.
   - Buidar l'inventari.
 
@@ -145,9 +145,9 @@ Crea diverses classes per a un programari d'una empresa de transport. Implementa
 - Els vehicles terrestres tenen un nombre de rodes (dada que no pot canviar).
 - Els vehicles aquàtics tenen eslora (dada que no pot canviar).
 - Els vehicles aeris tenen un nombre de seients (dada que no pot canviar).
-- Els cotxes poden tindre aire condicionat o no tindre’n.
+- Els cotxes poden tindre aire condicionat o no tindre'n.
 - Les motos tenen un color.
-- Els vaixells poden tindre motor o no tindre’n.
+- Els vaixells poden tindre motor o no tindre'n.
 - Els submarins tenen una profunditat màxima.
 - Els avions tenen un temps màxim de vol.
 - Els helicòpters tenen un nombre d'hèlices.
@@ -208,7 +208,7 @@ Quan es cree un compte és obligatori que tinga un IBAN i un titular (que no pod
 
 El saldo només pot variar quan es produeix un ingrés (entra diners al compte) o una retirada (ix diners del compte). En tots dos casos s'haurà de registrar l'operació als moviments. Els ingressos i les retirades només poden ser de valors superiors a zero.
 
-El saldo d'un compte mai no podrà ser inferior a -50(\*) euros. Si es produeix un moviment que deixe el compte amb un saldo negatiu (no inferior a -50) caldrà mostrar el missatge “AVÍS: Saldo negatiu”. Si es produeix un moviment superior a 3.000(\*) euros, es mostrarà el missatge “AVÍS: Notificar a hisenda”.
+El saldo d'un compte mai no podrà ser inferior a -50(\*) euros. Si es produeix un moviment que deixe el compte amb un saldo negatiu (no inferior a -50) caldrà mostrar el missatge "AVÍS: Saldo negatiu". Si es produeix un moviment superior a 3.000(\*) euros, es mostrarà el missatge "AVÍS: Notificar a hisenda".
 
 No es realitzarà cap mena d'entrada per teclat. L'única eixida per pantalla permesa són els dos missatges d'avís esmentats a dalt, cap altra.
 
