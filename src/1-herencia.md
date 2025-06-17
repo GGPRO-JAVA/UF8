@@ -1,6 +1,6 @@
-# 2. Herència
+# 1. Herència
 
-## 2.1 Introducció
+## 1.1 Introducció
 
 L'herència és una de les capacitats més importants i distintives de la POO. Consisteix en derivar o **estendre una classe nova a partir d'una altra ja existent de manera que la classe nova hereta tots els atributs i mètodes de la classe ja existent**.
 
@@ -30,7 +30,7 @@ public class Professor extends Persona {
 
 :::
 
-## 2.2 Constructors de classes derivades
+## 1.2 Constructors de classes derivades
 
 En la programació orientada a objectes, quan una classe deriva d'una altra, el constructor de la subclasse ha de garantir que també s'inicialitzen correctament els atributs heretats de la superclasse, a més dels seus propis. Per aconseguir-ho, normalment es proporciona un mecanisme per **cridar al constructor de la classe base des del constructor de la classe derivada**. Aquesta crida s'ha de fer generalment com a **primera instrucció dins del constructor de la subclasse** i és necessària si la classe base requereix paràmetres per a ser inicialitzada.
 
@@ -81,7 +81,7 @@ public class Professor extends Persona {
 :::
 ::::
 
-## 2.3 Mètodes heretats i sobreescrits
+## 1.3 Mètodes heretats i sobreescrits
 
 Hem vist que una subclasse hereta els atributs i mètodes de la superclasse; a més, es poden incloure nous atributs i nous mètodes. D'altra banda, pot ocórrer que algun dels mètodes que existeixen en la superclasse no ens valguen en la subclasse (tal com estan programats) i necessitem adequar-los a les característiques de la subclasse. Això pot fer-se mitjançant la sobreescriptura de mètodes.
 
@@ -102,7 +102,7 @@ System.out.println(…); // Imprimim els atributs exclusius de la classe derivad
 
 :::
 
-## 2.4 Classes i mètodes finals
+## 1.4 Classes i mètodes finals
 
 En el paradigma orientat a objectes, de vegades és necessari impedir que algunes classes s’hereten o que certs mètodes es sobreescriguen. Per a això, es fa servir el concepte de "finalització", que permet marcar elements com a no extensibles o no modificables.
 
@@ -157,7 +157,7 @@ En Java, el concepte de "final" està integrat com a paraula reservada i s’apl
 
 :::
 
-## 2.5 Accés a membres derivats
+## 1.5 Accés a membres derivats
 
 Encara que una subclasse inclou tots els membres de la seua superclasse, no podrà accedir als que estiguen declarats com a privats. Si en algun exemple intentàrem accedir des de la classe derivada a un atribut privat (definit a la classe base), obtindríem un error de compilació.
 
@@ -171,7 +171,7 @@ Per permetre que els atributs siguen visibles només per a les subclasses (i no 
 >
 >En canvi, no és accessible des de classes independents que no formen part de la jerarquia d’herència. Això permet compartir dades amb subclasses, però alhora mantindre-les ocultes per a la resta del codi.
 
-## 2.6 Exemple 3
+## 1.6 Exemple 3
 
 En aquest exemple crearem les classe **Persona** i les seues classes heretades: **Alumne** i **Professor**. En la classe Persona crearem el constructor, un mètode per a mostrar els atributs i els *getters* i *setters*. **Les classes Alumne i Professor heretaran de la classe Persona** i cadascuna tindrà els seus propis atributs, un constructor que anomenarà també al constructor de la classe Persona, un mètode per a mostrar els seus atributs, que també cridarà al mètode de Persona i els getters i setters. És interessant veure com **s'ha sobreescrit el mètode mostrarPersona() en les classes heretades**. El mètode es diu igual i crida al mètode de mostrarPersona() de Persona. En la crida del mètode principal, tant l'objecte **a** (Alumne) com l'objecte **profe** (Professor) poden fer ús del mètode mostrarPersona().
 

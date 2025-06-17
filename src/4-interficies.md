@@ -1,4 +1,4 @@
-# 5. Interfícies
+# 4. Interfícies
 
 Una interfície és una **declaració d'atributs i mètodes sense implementació** (sense definir el codi dels mètodes). S'utilitzen per a definir el conjunt mínim d'atributs i mètodes de les classes que implementen aquesta interfície. En certa manera, és paregut a una classe abstracta amb tots els seus membres abstractes.
 
@@ -142,7 +142,7 @@ En la pràctica, una interfície buida pot servir com a “etiqueta” que ident
 >
 >::::
 
-## 5.1 Exemple complet
+## 4.1 Exemple complet
 
 En aquest exemple crearem una interfície Figura i posteriorment la implementarem en vàries classes. Per a crear una interfície hem de punxar amb el botó dret sobre el paquet on la vulguem crear i després NEW > Java Interface.
 

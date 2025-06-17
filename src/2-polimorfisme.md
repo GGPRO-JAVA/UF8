@@ -1,4 +1,4 @@
-# 3. Polimorfisme
+# 2. Polimorfisme
 
 El **polimorfisme** o sobreescriptura de mètodes és la pràctica de definir un mètode en una subclasse amb la mateixa signatura (nom i paràmetres) que un mètode existent en la classe base. Quan una subclasse sobreescriu un mètode, ofereix una implementació específica per a aquell comportament.
 
