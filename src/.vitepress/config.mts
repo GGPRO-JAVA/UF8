@@ -33,33 +33,31 @@ export default withMermaid({
       { text: '🏠 Inici', link: '/' },
       { text: '📋 Objectius', link: '/objectius' },
       { text: '📚 Continguts', items: [
-        { text: '1. Relacions entre classes', link: '/1-relacions' },
-        { text: '2. Herència', link: '/2-herencia' },
-        { text: '3. Polimorfisme', link: '/3-polimorfisme' },
-        { text: "4. Classes abstractes", link: '/4-abstract' },
-        { text: "5. Interfícies", link: '/5-interficies' },
-        { text: 'Exercicis', link: '/6-exercicis' },
+        { text: '1. Herència', link: '/1-herencia' },
+        { text: '2. Polimorfisme', link: '/2-polimorfisme' },
+        { text: "3. Classes abstractes", link: '/3-abstract' },
+        { text: "4. Interfícies", link: '/4-interficies' },
+        { text: 'Exercicis', link: '/5-exercicis' },
       ]},
       { text: '📚 Continguts addicionals', items: [
-        { text: 'Operador instanceof', link: '/7-add_instanceof' },
-        { text: 'Referència this', link: '/8-add_this' },
+        { text: 'Operador instanceof', link: '/6-add_instanceof' },
+        { text: 'Referència this', link: '/7-add_this' },
       ]}
     ],
     sidebar: [
       {
         text: '📚 Continguts',
         items: [
-        { text: '1. Relacions entre classes', link: '/1-relacions' },
-        { text: '2. Herència', link: '/2-herencia' },
-        { text: '3. Polimorfisme', link: '/3-polimorfisme' },
-        { text: "4. Classes abstractes", link: '/4-abstract' },
-        { text: "5. Interfícies", link: '/5-interficies' },
-        { text: 'Exercicis', link: '/6-exercicis' },
+        { text: '1. Herència', link: '/1-herencia' },
+        { text: '2. Polimorfisme', link: '/2-polimorfisme' },
+        { text: "3. Classes abstractes", link: '/3-abstract' },
+        { text: "4. Interfícies", link: '/4-interficies' },
+        { text: 'Exercicis', link: '/5-exercicis' },
         ]
       },
       { text: '📚 Continguts addicionals', items: [
-        { text: 'Operador instanceof', link: '/7-add_instanceof' },
-        { text: 'Referència this', link: '/8-add_this' },
+        { text: 'Operador instanceof', link: '/6-add_instanceof' },
+        { text: 'Referència this', link: '/7-add_this' },
         { text: '<img src="img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
         { text: '<img src="img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
       ]}

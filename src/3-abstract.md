@@ -1,4 +1,4 @@
-# 4. Classes abstractes
+# 3. Classes abstractes
 
 Una **classe abstracta** és una classe que **declara l'existència d'alguns mètodes però no la seua implementació** (és a dir, conté la capçalera del mètode però no el seu codi). Els mètodes sense implementar són mètodes abstractes.
 
