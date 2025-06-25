@@ -104,22 +104,22 @@ System.out.println(…); // Imprimim els atributs exclusius de la classe derivad
 
 ## 2.4 Classes i mètodes finals
 
-En el paradigma orientat a objectes, de vegades és necessari impedir que algunes classes s’hereten o que certs mètodes es sobreescriguen. Per a això, es fa servir el concepte de "finalització", que permet marcar elements com a no extensibles o no modificables.
+En el paradigma orientat a objectes, de vegades és necessari impedir que algunes classes s'hereten o que certs mètodes es sobreescriguen. Per a això, es fa servir el concepte de "finalització", que permet marcar elements com a no extensibles o no modificables.
 
 **Classes finals**  
 
-- Una **classe final és aquella que no es pot estendre ni heretar**. Quan una classe es declara com a final, s’assegura que cap altra classe no puga crear-ne una subclasse.
-- Aquest recurs s’utilitza quan es vol garantir que la lògica interna o la interfície d’una classe no siga alterada per cap derivació, per motius de seguretat, rendiment o coherència del disseny.
+- Una **classe final és aquella que no es pot estendre ni heretar**. Quan una classe es declara com a final, s'assegura que cap altra classe no puga crear-ne una subclasse.
+- Aquest recurs s'utilitza quan es vol garantir que la lògica interna o la interfície d'una classe no siga alterada per cap derivació, per motius de seguretat, rendiment o coherència del disseny.
 
 **Mètodes finals**  
 
 - Un **mètode final és aquell que no pot ser redefinit en cap subclasse**. La seua implementació roman inalterable, fins i tot si la classe on resideix es pot heretar.
-- Declarar un mètode com a final ajuda a mantindre la coherència d’una funcionalitat crítica i a evitar canvis involuntaris per part de les subclasses.
+- Declarar un mètode com a final ajuda a mantindre la coherència d'una funcionalitat crítica i a evitar canvis involuntaris per part de les subclasses.
 
 ::: tabs
 == Java
 
-En Java, el concepte de "final" està integrat com a paraula reservada i s’aplica tant a classes com a mètodes i atributs:
+En Java, el concepte de "final" està integrat com a paraula reservada i s'aplica tant a classes com a mètodes i atributs:
 
 1. **Classes finals**
     - Sintaxi:
@@ -128,11 +128,11 @@ En Java, el concepte de "final" està integrat com a paraula reservada i s’apl
     public final class NomDeClasse { … }
     ```
 
-   - Efecte: Ninguna altra classe podrà heretar de NomDeClasse. Si s’intenta fer-ho, el compilador donarà error.
+   - Efecte: Ninguna altra classe podrà heretar de NomDeClasse. Si s'intenta fer-ho, el compilador donarà error.
 
 2. **Mètodes finals**
 
-    - Sintaxi (dins d’una classe que no siga final):
+    - Sintaxi (dins d'una classe que no siga final):
 
     ```java
     public final void metodeExemple() { … }
@@ -150,7 +150,7 @@ En Java, el concepte de "final" està integrat com a paraula reservada i s’apl
     public static final int CONSTANT = 100;
     ```
 
-   - Efecte: Les variables declarades com a final s’inicialitzen una sola vegada (normalment al declarar-les o dins del constructor) i no poden ser modificades durant la vida de l’objecte o, si són estàtiques, de la classe.
+   - Efecte: Les variables declarades com a final s'inicialitzen una sola vegada (normalment al declarar-les o dins del constructor) i no poden ser modificades durant la vida de l'objecte o, si són estàtiques, de la classe.
 
 >[!IMPORTANT]<strong>IMPORTANT!</strong>
 >En Java, per tant, la paraula `final` fa efectiu el concepte de "no extensible" per a classes, "no sobreescrivible" per a mètodes i "no reassignable" per a variables, garantint així la fermesa del disseny i la integritat de les dades.
@@ -161,15 +161,15 @@ En Java, el concepte de "final" està integrat com a paraula reservada i s’apl
 
 Encara que una subclasse inclou tots els membres de la seua superclasse, no podrà accedir als que estiguen declarats com a privats. Si en algun exemple intentàrem accedir des de la classe derivada a un atribut privat (definit a la classe base), obtindríem un error de compilació.
 
-Per permetre que els atributs siguen visibles només per a les subclasses (i no per a cap altra classe), els podem declarar com a protegits. D’aquesta manera, aquests membres quedaran accessibles únicament des de la classe original i les classes que en deriven, però mai des d’altres parts del programa.
+Per permetre que els atributs siguen visibles només per a les subclasses (i no per a cap altra classe), els podem declarar com a protegits. D'aquesta manera, aquests membres quedaran accessibles únicament des de la classe original i les classes que en deriven, però mai des d'altres parts del programa.
 
 >[!IMPORTANT]<strong>IMPORTANT!</strong>
->Un **atribut protegit** és un membre d’una classe al qual només poden accedir:
+>Un **atribut protegit** és un membre d'una classe al qual només poden accedir:
 >
 >- La mateixa classe on està definit.
 >- Les classes que en deriven (subclasses).
 >
->En canvi, no és accessible des de classes independents que no formen part de la jerarquia d’herència. Això permet compartir dades amb subclasses, però alhora mantindre-les ocultes per a la resta del codi.
+>En canvi, no és accessible des de classes independents que no formen part de la jerarquia d'herència. Això permet compartir dades amb subclasses, però alhora mantindre-les ocultes per a la resta del codi.
 
 ## 2.6 Exemple 3
 
